@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    color:green;
+}
+
+body {
+    color: #5e4b3c;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-image: url('images/rainforest.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background-color: #fff9f2;
+    border: 4px dashed #d2b48c;
+    border-radius: 12px;
+    padding: 30px;
+    width: 50%;
+    text-align: center;
+}
+
+h1{
+    font-size: 75px;
+}
+
+input {
+    width: 70%;
+    padding: 12px;
+    border: 2px solid orange;
+    border-radius: 8px;
+}
+
+.addTask {
+    background-color:#fff9f2;
+}
+
+button {
+    padding: 12px 22px;
+    margin-top: 18px;
+    background-color: #c1a37b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b08b5c;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    padding: 10px;
+    background-color: #f0e6d6;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+
+.sloth-image {
+    margin-top: 15px;
+    max-height: 200px;
+    overflow: hidden;
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.sloth-image img {
+    max-width: 100%;      
+    max-height: 200px;   
+    object-fit: contain;  
+    border-radius: 8px; 
+}
