@@ -92,7 +92,7 @@ li.completed {
 
 @media screen and (max-width: 960px){
     h1{
-        font-size: 66px;
+    font-size: 66px;
     }
 
 #taskInput, .clearCompleted, .clearAll{
@@ -119,7 +119,7 @@ input{
     }
 
     .container{
-        width:52%;
+        width: 52%;
     }
 }
 
