@@ -3,6 +3,7 @@ const taskList = document.getElementById("taskList");
 const slothDiv = document.getElementById("slothReaction");
 
 // add audio
+//I like adding audio this way, seems like the easiest way to do it https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
 const clickSound = new Audio("images/costarica.mp3"); 
 
 // attach audio to first click on input
@@ -17,6 +18,8 @@ taskInput.addEventListener("focus", function() {
 
 // Add new task
 // using .trim() ensures user adds real, non-empty tasks/not just blank space
+//asked chatgpt about it and then found more info on mdn https://developer.
+// mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 
     document.querySelector(".addTask").addEventListener("click", function() {
       const taskText = input.value.trim();
@@ -26,6 +29,8 @@ taskInput.addEventListener("focus", function() {
       li.textContent = taskText;
 
 // Toggle complete on click
+//I remembered appendChild from another project we worked on, I asked chatgpt about it and also looked 
+//up more info on mdn https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
       li.addEventListener("click", function() {
         li.classList.toggle("completed");
         showRandomSloth();
@@ -36,6 +41,8 @@ taskInput.addEventListener("focus", function() {
     });
 
 // Show random sloth image briefly
+//chatgpt again, looked up again more info on mdn
+//https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout
     function showRandomSloth() {
       const img = document.createElement("img");
       img.src = getRandomSlothImage();
@@ -68,8 +75,14 @@ taskInput.addEventListener("focus", function() {
       return slothImages[Math.floor(Math.random() * slothImages.length)];
     }
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+//and chatgpt help
+
 
 // Clear completed tasks
+// decided to use addEventListener so I can become more comfortable with it than sticking to onclick in html
+// also used querySelectorAll https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
 
 document.querySelector(".clearCompleted").addEventListener("click", function () {
   const completed = document.querySelectorAll("li.completed");
